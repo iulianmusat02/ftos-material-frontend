@@ -1,0 +1,20 @@
+<div class="container-fluid edit-uicomponentcontainer">
+    <div class="container-action-buttons">
+        <button (click)="updateComponent()">Update</button>
+    </div>
+    <mat-tab-group>
+        <mat-tab label="Visual">
+            <div [innerHTML]="component.html"></div>
+        </mat-tab>
+        <mat-tab label="</>">
+            <pre>
+            <label for="">Html</label>
+            <textarea [(ngModel)]="component.html"></textarea> 
+            </pre>
+            <pre>
+            <label for="">CSS</label>
+            <textarea [(ngModel)]="component.css"></textarea> 
+            </pre>
+        </mat-tab>
+    </mat-tab-group>
+</div>

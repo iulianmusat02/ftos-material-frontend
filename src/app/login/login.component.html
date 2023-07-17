@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>
+        Autentificare
+    </h1>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="input-holder">
+                <label for="username">Utilizator</label>
+                <input type="text" [(ngModel)]="authObj.email">
+            </div>
+            <div class="input-holder">
+                <label for="username">Parola</label>
+                <input type="password" [(ngModel)]="authObj.password">
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" (click)="login()">Autentificare</button>   
+    <br>
+    <a href="#" routerLink="/register">Inregistrare</a>
+</div>

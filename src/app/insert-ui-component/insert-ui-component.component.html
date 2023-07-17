@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <h1>Insert UI Component</h1>
+    <div class="container-action-buttons">
+        <button (click)="submit()">Save</button>
+    </div>
+    <div class="insertUiForm">
+        <div class="row">
+            <div class="col-xs-6 col-md-6 col-lg-6">
+                <div class="insertRow">
+                    <label for="">HTML</label>
+                    <textarea [(ngModel)]="insertObj.html"></textarea>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6 col-lg-6">
+                <div class="insertRow">
+                    <label for="">CSS</label> 
+                    <textarea [(ngModel)]="insertObj.css"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 col-lg-6">
+                <div class="insertRow">
+                    <label for="Created By">Author</label>
+                    <input type="text" [(ngModel)]="insertObj.createdBy">
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6 col-lg-6">
+                <div class="insertRow">
+                    <label for="Created By">Component type</label>
+                    <!-- <input type="text"> -->
+                    <select [(ngModel)]="insertObj.componentType">
+                        <option value="homepage" selected>Homepage</option>
+                        <option value="formDrivenFlow" >Form driven flow</option>
+                        <option value="view/grid" >View/Grid</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="insertRow">
+            <label for="">JS</label> 
+            <textarea></textarea>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="userInterface">FINTECHOS Material</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li *ngIf="isLoggedIn" class="active"><a >
+          <button mat-button [matMenuTriggerFor]="menu">UI Components</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="homepage-userinterface">Homepage</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+          </a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="insertComponent">Insert UI Component</a></li>
+        <li *ngIf="isLoggedIn"><a target=”_blank” href="http://localhost:4400/">OpenAI</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="login">Log in</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="logout">Log out</a></li>
+
+        {{isLoggedIn}}
+      </ul>
+    </div>
+  </nav>

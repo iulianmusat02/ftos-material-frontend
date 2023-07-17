@@ -1,0 +1,40 @@
+<h1>
+    Inregsitrare
+</h1>
+<div class="container">
+    <div *ngIf="!verificationEmail">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <div class="input-holder">
+                <label for="name">Nume</label>
+                <input type="text" [(ngModel)]="registrerObj.lastName">
+            </div>
+            <div class="input-holder">
+                <label for="surname">Prenume</label>
+                <input type="text" [(ngModel)]="registrerObj.firstName">
+            </div>
+            <div class="input-holder">
+                <label for="username">Email</label>
+                <input type="email" [(ngModel)]="registrerObj.email">
+            </div> 
+            <div class="input-holder">
+                <label for="password">Parola</label><br>
+                <input type="password" [(ngModel)]="registrerObj.password">
+            </div> 
+            <div class="input-holder">
+                <label for="confirmpassword">Confirma Parola</label><br>
+                <input type="password" [(ngModel)]="registrerObj.confirmPassword">
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" (click)="submitUser()">Continua</button>
+</div>
+    <div *ngIf="verificationEmail">
+        <div class="input-holder">
+            <label for="confirmpassword">Cod email</label><br>
+            <input type="emailCode" [(ngModel)]="emailCode">
+        </div>
+        <button class="btn btn-primary" (click)="confirmEmail()">Finalizare</button>
+    </div>
+  
+</div>

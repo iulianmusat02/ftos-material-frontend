@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="col-md-9 col-lg-9 col-xs-9">
+        <div *ngFor="let htmlhomepage of html.homepage">
+            <div [innerHTML]="htmlhomepage"></div>
+        </div>
+        
+    </div>
+    <div class="col-md-3 col-lg-3 col-xs-3">
+        snippet code 
+    </div>
+</div>

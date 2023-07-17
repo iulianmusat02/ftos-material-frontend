@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/dist/css/bootstrap-theme.min.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+label {
+    display: block;
+}
+.insertUiForm .insertRow textarea {
+    width: 100%;
+    height: 350px;
+    resize: none;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+input, select {
+    border: 2px solid;
+    border-radius: 5px;
+}
+.container-action-buttons {
+    width: 100%;
+    text-align: right;
+    button{
+        background: #000;
+        color:#fff;
+        border:none;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+}

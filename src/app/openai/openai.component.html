@@ -1,0 +1,36 @@
+<div class="loadingSpinner" *ngIf="isLoading">
+    <mat-spinner  mode="indeterminate"></mat-spinner>
+</div>
+<div class="containerMaterial">
+        <mat-tab-group>
+            <mat-tab label="Visual"> 
+
+                <div [innerHTML]="htmlOpenAIResponse"></div>
+            </mat-tab>
+            <mat-tab label="</>">
+                <pre>
+                <code>{{htmlOpenAIResponse}}</code> 
+                </pre>
+                <pre>
+                <code>{{cssOpenAIResponse}}</code> 
+                </pre>
+            </mat-tab>
+          </mat-tab-group>
+</div>
+
+<div class="chatBoxContainer">
+    <p> html </p>
+    <div class="chatMaster">
+        <textarea [(ngModel)]="htmlOpenAIRequest"></textarea>
+        <br>
+        <button (click)="generateHTML()">Send</button>
+    </div>
+    <hr>
+    <p> css </p>
+    <div class="chatMaster">
+        <textarea [(ngModel)]="cssOpenAIRequest"></textarea>
+        <br>
+        <button (click)="generateCSS()">Send</button>
+    </div>
+
+</div>

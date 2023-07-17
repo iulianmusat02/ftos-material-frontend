@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h1>Homepage UI</h1>
+    <div class="containerMaterial uicomponentcontainermaterial" *ngFor="let component of components" id="{{component.uicomponentsId}}">
+        <div class="container-action-buttons">
+            <button [routerLink]="'/editComponent/' + component.uicomponentsId">Edit</button>
+            <button (click)="deleteComponent(component.uicomponentsId)">Delete</button>
+        </div>
+        <mat-tab-group>
+            <mat-tab label="Visual">
+                <div [innerHTML]="component.html"></div>
+            </mat-tab>
+            <mat-tab label="</>">
+                <pre>
+                <label for="">Html</label>
+                <code>{{component.html}}</code> 
+                </pre>
+                <pre>
+                <label for="">CSS</label>
+                <code>{{component.css}}</code> 
+                </pre>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
